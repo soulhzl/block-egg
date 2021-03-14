@@ -5,8 +5,7 @@
  */
 module.exports = app => {
   const { router, controller, jwt } = app;
-  router.get('/', jwt, controller.home.index);
+  router.get('/', controller.home.index);
   router.get('/user', controller.user.index);
-  router.post('/user/register', controller.user.register);
-  router.post('/user/login', controller.user.login);
+  router.post('/user/loruser', controller.user.lorUser);
 };

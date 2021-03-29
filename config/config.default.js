@@ -29,11 +29,17 @@ module.exports = appInfo => {
     secret: '123456',
   };
   // 关闭csrf
+  // 跨域
   config.security = {
     csrf: {
-      enable: false,
-    }
-  }
+      enable: false
+    },
+    domainWhiteList: ['*']
+  };
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'
+  };
   // add your user configF here
   const userConfig = {
     // myAppName: 'egg',

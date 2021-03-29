@@ -15,5 +15,10 @@ module.exports = {
   jwt: {
     enable: true,
     package: 'egg-jwt',
+  },
+  // 跨域
+  cors: {
+    enable: true,
+    package: 'egg-cors'
   }
 };
